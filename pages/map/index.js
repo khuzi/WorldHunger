@@ -42,12 +42,12 @@ const Map = () => {
               <tr>
                 <th>
                   <Link href={"/map/[cid]"} as={`/map/${item.name}`}>
-                    <span
+                    <a
                       className="country-link"
                       style={{ color: "#333", textTransform: "capitalize" }}
                     >
                       {item.name}
-                    </span>
+                    </a>
                   </Link>
                 </th>
               </tr>
