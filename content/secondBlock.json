@@ -1,0 +1,16 @@
+{
+  "title": "Light, Fast & Responsive",
+  "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat recusandae magni facere incidunt rem, maxime dolorem sit distinctio similique",
+  "section": [
+    {
+      "title": "Lorem ipsum",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Lorem ipsum",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat recusandae magni facere incidunt rem",
+      "icon": "notes.svg"
+    }
+  ]
+}

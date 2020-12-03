@@ -1,65 +1,63 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+
+import ContactFrom from "../components/ContactForm";
+import ContentBlock from "../components/ContentBlock";
+import MiddleBlock from "../components/MiddleBlock";
+import Container from "../common/Container";
+import ScrollToTop from "../common/ScrollToTop";
+
+import Introduction from "../content/introduction.json";
+import FirstBlock from "../content/firstBlock.json";
+import SecondBlock from "../content/secondBlock.json";
+import ThirdBlock from "../content/thirdBlock.json";
+import FourthBlock from "../content/fourthBlock.json";
+import ContactBlock from "../content/contactBlock.json";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>
+          Interactive Map of International Food Security Data | World Hunger Map
+        </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <Container>
+        <ScrollToTop />
+        <ContentBlock
+          type="right"
+          first="true"
+          title={Introduction.title}
+          content={Introduction.text}
+          button={Introduction.button}
+          image="https://i.giphy.com/media/3ohhwgrL4KKPIZoTQY/giphy.webp"
+        />
+        <MiddleBlock
+          title={FirstBlock.title}
+          content={FirstBlock.text}
+          button={FirstBlock.button}
+        />
+        {/* <ContentBlock
+        type="left"
+        title={SecondBlock.title}
+        content={SecondBlock.text}
+        section={SecondBlock.section}
+        icon="graphs.svg"
+      /> */}
+        {/* <ContentBlock
+        type="right"
+        title={ThirdBlock.title}
+        content={ThirdBlock.text}
+        icon="product-launch.svg"
+      />
+      <ContentBlock
+        type="left"
+        title={FourthBlock.title}
+        content={FourthBlock.text}
+        icon="waving.svg"
+      /> */}
+        {/* <ContactFrom title={ContactBlock.title} content={ContactBlock.text} /> */}
+      </Container>
+    </>
+  );
 }

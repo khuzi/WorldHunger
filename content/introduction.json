@@ -1,0 +1,9 @@
+{
+  "title": "Explore food availability and access data for 76 low- and middle-income countries in an interactive map",
+  "text": "The dataset includes annual country-level data on area, yield, production, nonfood use, trade, and more.",
+  "button": [
+    {
+      "title": "Explore"
+    }
+  ]
+}
