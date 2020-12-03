@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
+
 import {
   LineChart,
   Line,
@@ -13,10 +15,10 @@ import {
 import countries from "../../data/data";
 
 const Country = ({ data }) => {
-  console.log("Data = ", data);
+  const router = useRouter();
 
-  if (data === null) {
-    return <h1>Loading</h1>;
+  if (router.isFallback) {
+    return <div>Loading...</div>;
   }
 
   const { name, record } = data;
@@ -70,9 +72,14 @@ const Country = ({ data }) => {
 
 export default Country;
 
-export async function getServerSideProps({ query, params }) {
-  const { cid } = query || params;
+export async function getStaticPaths() {
+  const ids = countries.map(({ name, ...rest }) => name);
+  const paths = ids.map((el) => `/map/${el}`);
+  return { paths, fallback: true };
+}
 
+export async function getStaticProps({ query, params }) {
+  const { cid } = query || params;
   const data = JSON.parse(
     JSON.stringify(countries.find((item) => item.name === cid))
   );

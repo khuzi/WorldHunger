@@ -1,6 +1,7 @@
 {
   "name": "worldhunger-next",
   "version": "0.1.0",
+  "homepage": "http://worldhunger.net/",
   "private": true,
   "scripts": {
     "dev": "next dev",
