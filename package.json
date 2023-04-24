@@ -33,6 +33,6 @@
     "recharts": "^1.8.5",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.18.5"
   }
 }
